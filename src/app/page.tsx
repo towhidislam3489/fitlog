@@ -12,7 +12,7 @@ const page = () => {
   return (
     <div>
       <Banner></Banner>
-      <div id='library'>
+      <div id='library'  className="scroll-mt-24">
         <LibrarySection ></LibrarySection>
       </div>
     </div>

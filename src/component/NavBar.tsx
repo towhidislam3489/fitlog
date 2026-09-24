@@ -11,8 +11,8 @@ const NavBar = () => {
     const pathname = usePathname();
     const { planlist, savelist } = useContext(MainDatacontext)
     return (
-        <div className="border-b-1">
-            <div className="flex items-center justify-between max-w-[80%] mx-auto mt-5 sticky mb-5 ">
+        <div className="border-b-1 sticky top-5 z-50">
+            <div className="flex items-center justify-between max-w-[80%] mx-auto mt-5  mb-5 ">
                 <div >
                     <Link href={'/'} className="flex gap-3 items-center text-center">
                         <Image src={NavLogo} alt='navlogo'></Image>

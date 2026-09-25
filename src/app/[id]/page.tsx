@@ -3,6 +3,7 @@ import DetialseCard from '@/component/DetialseCard';
 import { Idatatye } from '@/type/MainData';
 import { Metadata } from 'next';
 import React from 'react';
+import NotFound from './not-found';
 export const metadata: Metadata = {
   title: "Details",
   description: "details",
@@ -20,7 +21,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
     const finded = data.find(v => String(v.id) === String(id))
     return (
         <div className="my-10">
-            {finded ? <DetialseCard eachdata={finded}></DetialseCard> : "Not found"}   
+            {finded ? <DetialseCard eachdata={finded}></DetialseCard> : <NotFound></NotFound>}   
         </div>
     );
 };

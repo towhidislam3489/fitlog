@@ -16,7 +16,7 @@ const LibraryCardSection = ({ eachdata }: ICardDatatype) => {
                     <Image src={eachdata.image} alt='image' height={200} width={400} className="rounded-2xl h-70 w-full" ></Image>
                 </div>
                 <div className="p-5 space-y-3">
-                    <h1 className="flex gap-3"> {eachdata.muscleGroups.map((v, ind) => <span key={ind} className="bg-[#C2F800] text-black  p-1 rounded-[5px] text-[12px] font-semibold">{v}</span>)}</h1>
+                    <h1 className="flex gap-3"> {eachdata.muscleGroups.map((v, ind) => <span key={ind} className="bg-[#C2F800] text-black  py-1 px-2 rounded-[5px] text-[12px] font-semibold">{v}</span>)}</h1>
                     <h1 className="uppercase font-semibold ">{eachdata.name}</h1>
                     <h1 className="text-[12px]">{eachdata.equipment}</h1>
                     <hr className="border-gray-700 mt-5" />

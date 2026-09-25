@@ -12,7 +12,7 @@ const NavBar = () => {
     const pathname = usePathname();
  
     return (
-        <div className="border-b-1 sticky top-0 z-50 ">
+        <div className="border-b sticky top-0 z-50 ">
             <div className="bg-black">
                 <div className="flex items-center justify-between max-w-[80%] mx-auto pt-5  pb-5  ">
                     <div >
@@ -22,9 +22,9 @@ const NavBar = () => {
                         </Link>
 
                     </div>
-                    <ul className="flex gap-8">
-                        <Link href={"/"}>  <li className={`${pathname == '/' ? "text-[#C2F800] bg-[#1A2312]" : ""} w-20 items-center text-center rounded-[5px]`}>Workouts</li></Link>
-                        <Link href={"/myplan"}>  <li className={`${pathname == '/myplan' ? "text-[#C2F800] bg-[#1A2312]" : ""} w-20 items-center text-center rounded-[5px]`}>My Plan</li></Link>
+                    <ul className="flex gap-2">
+                        <Link href={"/"}>  <li className={`${pathname == '/' ? "text-[#C2F800] bg-[#1A2312]" : ""}  items-center text-center rounded-[5px] p-3`}>Workouts</li></Link>
+                        <Link href={"/myplan"}>  <li className={`${pathname == '/myplan' ? "text-[#C2F800] bg-[#1A2312]" : ""}  items-center text-center rounded-[5px] p-3`}>My Plan</li></Link>
 
                     </ul>
                     <ul className="flex gap-3">

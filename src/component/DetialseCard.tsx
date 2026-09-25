@@ -14,7 +14,7 @@ const DetialseCard = ({ eachdata }: { eachdata: Idatatye }) => {
             <div className="md:col-span-6 space-y-5">
                 <h1 className="uppercase font-semibold text-2xl">{eachdata.name}</h1>
                 <h1 className=" text-[15px]">{eachdata.description}</h1>
-                <h1 className="flex gap-3"> {eachdata.muscleGroups.map((v, ind) => <span key={ind} className="bg-[#C2F800] text-black  p-1 rounded-[5px] text-[12px] font-semibold">{v}</span>)}</h1>
+                <h1 className="flex gap-3"> {eachdata.muscleGroups.map((v, ind) => <span key={ind} className="bg-[#C2F800] text-black  py-1 px-2 rounded-[5px] text-[12px] font-semibold">{v}</span>)}</h1>
                 <div className="w-full overflow-hidden rounded-2xl border border-[#252c38] bg-[#151922]">
                     <table className="w-full">
                         <tbody>

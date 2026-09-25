@@ -34,7 +34,7 @@ const PlanCard = () => {
                 </div>
                 :
                 planlist.map(v => (
-                    <div key={v.id} className="mb-8  border-2 border-gray-600 p-4 rounded-2xl flex justify-between items-center">
+                    <div key={v.id} className="mb-8  border-2 border-gray-600 p-4 rounded-2xl md:flex justify-between items-center">
                         <div className="flex gap-4 ">
                             <div className="">
                                 <Image src={v.image} alt='image' height={200} width={400} className="rounded-2xl h-[120] w-[200]" ></Image>

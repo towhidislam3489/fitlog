@@ -5,11 +5,12 @@ import React from 'react';
 
 
 import { useContext } from 'react';
-import { text } from 'stream/consumers';
+
 import PlanCard from './PlanCard';
+import SaveCard from './SaveCard';
 
 const PlanTopCard = () => {
-    const { planlist, savelist } = useContext(MainDatacontext)
+    const { planlist } = useContext(MainDatacontext)
     return (
         <div className="max-w-[80%] mx-auto">
             <div className="mb-8 mt-16">
@@ -38,7 +39,7 @@ const PlanTopCard = () => {
                 <div className="tab-content  pt-6"> <PlanCard></PlanCard> </div>
 
                 <input type="radio" name="my_tabs_6" className="tab checked:bg-[#C2F800] checked:text-black rounded-2xl" aria-label="Saved"  />
-                <div className="tab-content  pt-6">Tab content 2</div>
+                <div className="tab-content  pt-6"><SaveCard></SaveCard></div>
 
             </div>
         </div>

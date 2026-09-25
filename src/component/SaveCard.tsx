@@ -8,16 +8,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react';
 
-const PlanCard = () => {
-    const { planlist,setPlanlist } = useContext(MainDatacontext)
+const SaveCard = () => {
+    const { savelist,setSavelist } = useContext(MainDatacontext)
     const HandellerRemove=(Data:Idatatye)=>
     {
-        const newplanlist=planlist.filter(v => Data.id!==v.id);
-        setPlanlist(newplanlist);
+        const newplanlist=savelist.filter(v => Data.id!==v.id);
+        setSavelist(newplanlist);
     }
     return (
         <div>
-            {planlist.length === 0 ?
+            {savelist.length === 0 ?
                 <div className="py-16 text-center">
                     <h2 className="text-2xl font-bold">NOTHING HERE YET</h2>
 
@@ -33,7 +33,7 @@ const PlanCard = () => {
                     </Link>
                 </div>
                 :
-                planlist.map(v => (
+                savelist.map(v => (
                     <div key={v.id} className="mb-8  border-2 border-gray-600 p-4 rounded-2xl flex justify-between items-center">
                         <div className="flex gap-4 ">
                             <div className="">
@@ -56,13 +56,6 @@ const PlanCard = () => {
                             >
                                 View Details
                             </Link>
-
-                            <Link
-                                href="/"
-                                className="mt-6 grid justify-center items-center rounded-lg bg-[#C2F800] h-10 px-5 font-semibold text-black"
-                            >
-                                Mark as Done
-                            </Link>
                             <button className="mt-6 grid justify-center items-center rounded-lg h-10  font-semibold" onClick={()=> HandellerRemove(v)}>
                                     <X></X>
                             </button>
@@ -73,4 +66,4 @@ const PlanCard = () => {
     );
 };
 
-export default PlanCard;
+export default SaveCard;

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { Calendar, Save } from "lucide-react";
+import EachDataDetialsButton from '@/buttoncomponent/EachDataDetialsButton';
 
 const DetialseCard = ({ eachdata }: { eachdata: Idatatye }) => {
     return (
@@ -113,19 +114,9 @@ const DetialseCard = ({ eachdata }: { eachdata: Idatatye }) => {
                     </ol>
 
                 </div>
-                <div className="flex gap-5">
-                    <Link href={'/'}
-
-                        className=" bg-[#C2F800] text-black font-semibold px-5 py-1.5 rounded-[10px] hover:scale-105 transition-transform duration-300 flex gap-2 items-center"
-                    >
-                        <Calendar size={20}></Calendar> <h1>Add to today's plan</h1>
-                    </Link>
-                    <Link href={'/'}
-
-                        className=" font-semibold px-5 py-1.5 rounded-[10px] hover:scale-105 transition-transform duration-300 border border-gray-600 flex gap-2 items-center"
-                    >
-                        <Save></Save> <h1>Save for later</h1>
-                    </Link>
+                <div >
+                 
+                    <EachDataDetialsButton eachData={eachdata}></EachDataDetialsButton>
                 </div>
             </div>
         </div>

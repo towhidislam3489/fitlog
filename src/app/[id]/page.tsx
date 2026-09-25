@@ -1,7 +1,12 @@
 import DetialseCard from '@/component/DetialseCard';
-import LibraryCardSection from '@/component/LibraryCardSection';
+
 import { Idatatye } from '@/type/MainData';
+import { Metadata } from 'next';
 import React from 'react';
+export const metadata: Metadata = {
+  title: "Details",
+  description: "details",
+};
 
 const dataLoad = async (): Promise<Idatatye[]> => {
     const res = await fetch("https://api.abcz.workers.dev/api/fitlog");

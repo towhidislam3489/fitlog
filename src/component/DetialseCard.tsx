@@ -1,8 +1,8 @@
 import { Idatatye } from '@/type/MainData';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import React from 'react';
-import { Calendar, Save } from "lucide-react";
+
 import EachDataDetialsButton from '@/buttoncomponent/EachDataDetialsButton';
 
 const DetialseCard = ({ eachdata }: { eachdata: Idatatye }) => {

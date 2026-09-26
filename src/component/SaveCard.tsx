@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react';
 
-const SaveCard = () => {
+const SaveCard = ({props}:{props:Idatatye[]}) => {
     const { savelist,setSavelist } = useContext(MainDatacontext)
     const HandellerRemove=(Data:Idatatye)=>
     {
@@ -33,7 +33,7 @@ const SaveCard = () => {
                     </Link>
                 </div>
                 :
-                savelist.map(v => (
+                props.map(v => (
                     <div key={v.id} className="mb-8  border-2 border-gray-600 p-4 rounded-2xl md:flex justify-between items-center">
                         <div className="flex gap-4 ">
                             <div className="">
@@ -44,8 +44,8 @@ const SaveCard = () => {
                                 <h1 className="text-[15px]">{v.equipment}</h1>
                                 <div className="flex gap-4 ">
                                     <div className="flex gap-2 text-[15px] items-center text-center"><span ><Clock size={15} className="text-[#C2F800]" /></span> <span>{v.duration} min</span></div>
-                                    <div className="flex gap-2 text-[15px] items-center text-center"><span ><Flame size={15} className="text-[#C2F800]" /></span> <span>{v.caloriesBurned} min</span></div>
-                                    <div className="flex gap-2 text-[15px] items-center text-center"><span ><Star size={15} className="text-[#C2F800]" /></span> <span>{v.rating} min</span></div>
+                                    <div className="flex gap-2 text-[15px] items-center text-center"><span ><Flame size={15} className="text-[#C2F800]" /></span> <span>{v.caloriesBurned} kcal</span></div>
+                                    <div className="flex gap-2 text-[15px] items-center text-center"><span ><Star size={15} className="text-[#C2F800]" /></span> <span>{v.rating}</span></div>
                                 </div>
                             </div>
                         </div>

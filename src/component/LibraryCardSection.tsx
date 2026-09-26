@@ -22,8 +22,8 @@ const LibraryCardSection = ({ eachdata }: ICardDatatype) => {
                     <hr className="border-gray-700 mt-5" />
                     <div className="flex justify-between items-center">
                         <div className="flex gap-2 text-[15px] items-center text-center"><span ><Clock size={15} /></span> <span>{eachdata.duration} min</span></div>
-                        <div className="flex gap-2 text-[15px] items-center text-center"><span ><Flame size={15} /></span> <span>{eachdata.caloriesBurned} min</span></div>
-                        <div className="flex gap-2 text-[15px] items-center text-center"><span ><Star size={15} /></span> <span>{eachdata.rating} min</span></div>
+                        <div className="flex gap-2 text-[15px] items-center text-center"><span ><Flame size={15} /></span> <span>{eachdata.caloriesBurned} kcal</span></div>
+                        <div className="flex gap-2 text-[15px] items-center text-center"><span ><Star size={15} /></span> <span>{eachdata.rating}</span></div>
                     </div>
                 </div>
             </Link>

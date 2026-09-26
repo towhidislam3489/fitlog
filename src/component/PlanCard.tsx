@@ -7,13 +7,41 @@ import { Clock, Flame, Star, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react';
+import { Bounce, toast } from 'react-toastify';
 
-const PlanCard = ({props}:{props:Idatatye[]}) => {
-    const { planlist,setPlanlist } = useContext(MainDatacontext)
-    const HandellerRemove=(Data:Idatatye)=>
-    {
-        const newplanlist=planlist.filter(v => Data.id!==v.id);
+const PlanCard = ({ props }: { props: Idatatye[] }) => {
+    const { planlist, setPlanlist,done,setdone } = useContext(MainDatacontext)
+   
+    const HandellerRemove = (Data: Idatatye) => {
+        const newplanlist = planlist.filter(v => Data.id !== v.id);
         setPlanlist(newplanlist);
+        toast.error(`${Data.name} is remove`, {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    }
+    const HandellMarkasDone = (Data: Idatatye) => {
+        // const newplanlist = planlist.filter(v => Data.id !== v.id);
+        // setPlanlist(newplanlist);
+        toast.success(`${Data.name} is Done`, {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+        setdone([...done,Data.id]);
     }
     return (
         <div>
@@ -57,14 +85,24 @@ const PlanCard = ({props}:{props:Idatatye[]}) => {
                                 View Details
                             </Link>
 
-                            <Link
-                                href="/"
-                                className="mt-6 grid justify-center items-center rounded-lg bg-[#C2F800] h-10 px-5 font-semibold text-black"
+
+
+
+                            <button
+                                onClick={() => HandellMarkasDone(v)}
+                                disabled={done.includes(v.id)}
+                                className={`mt-6 grid justify-center items-center rounded-lg h-10 px-5 font-semibold
+        ${done.includes(v.id)
+                                        ? "bg-transparent border border-gray-500 text-gray-500 cursor-not-allowed"
+                                        : "bg-[#C2F800] text-black cursor-pointer"
+                                    }
+    `}
                             >
-                                Mark as Done
-                            </Link>
-                            <button className="mt-6 grid justify-center items-center rounded-lg h-10  font-semibold" onClick={()=> HandellerRemove(v)}>
-                                    <X></X>
+                                {done.includes(v.id) ? "Done" : "Mark as Done"}
+                            </button>
+
+                            <button className="mt-6 grid justify-center items-center rounded-lg h-10  font-semibold" onClick={() => HandellerRemove(v)}>
+                                <X></X>
                             </button>
                         </div>
                     </div>))

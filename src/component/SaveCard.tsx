@@ -7,13 +7,24 @@ import { Clock, Flame, Star, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react';
+import { Bounce, toast } from 'react-toastify';
 
-const SaveCard = ({props}:{props:Idatatye[]}) => {
-    const { savelist,setSavelist } = useContext(MainDatacontext)
-    const HandellerRemove=(Data:Idatatye)=>
-    {
-        const newplanlist=savelist.filter(v => Data.id!==v.id);
+const SaveCard = ({ props }: { props: Idatatye[] }) => {
+    const { savelist, setSavelist } = useContext(MainDatacontext)
+    const HandellerRemove = (Data: Idatatye) => {
+        const newplanlist = savelist.filter(v => Data.id !== v.id);
         setSavelist(newplanlist);
+        toast.error(`${Data.name} is remove`, {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
     }
     return (
         <div>
@@ -56,8 +67,8 @@ const SaveCard = ({props}:{props:Idatatye[]}) => {
                             >
                                 View Details
                             </Link>
-                            <button className="mt-6 grid justify-center items-center rounded-lg h-10  font-semibold" onClick={()=> HandellerRemove(v)}>
-                                    <X></X>
+                            <button className="mt-6 grid justify-center items-center rounded-lg h-10  font-semibold" onClick={() => HandellerRemove(v)}>
+                                <X></X>
                             </button>
                         </div>
                     </div>))

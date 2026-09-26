@@ -63,7 +63,7 @@ const PlanTopCard = () => {
 
 
                 <div className="absolute right-0  flex gap-5 items-center">
-                    <p className="flex gap-2"><span>Sort</span> <span>by</span></p>
+                    <p className="sm:flex sm:gap-2 hidden sm:visible"><span>Sort</span> <span>by</span></p>
                     <select
                         value={sortby}
                         onChange={(e)=>setSortby( e.target.value as "duration" | "calories" | "rating" )}

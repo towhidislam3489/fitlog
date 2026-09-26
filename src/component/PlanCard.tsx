@@ -80,7 +80,7 @@ const PlanCard = ({ props }: { props: Idatatye[] }) => {
                         <div className="flex gap-4 items-center">
                             <Link
                                 href={`/${v.id}`}
-                                className="mt-6 grid justify-center rounded-lg text-white h-10 items-center px-5 font-semibold border-2 border-gray-600 bg-black "
+                                className="mt-6 grid justify-center rounded-lg text-white  items-center py-2 px-5 font-semibold border-2 border-gray-600 bg-black  text-[10px] sm:text-[15px]"
                             >
                                 View Details
                             </Link>
@@ -91,7 +91,7 @@ const PlanCard = ({ props }: { props: Idatatye[] }) => {
                             <button
                                 onClick={() => HandellMarkasDone(v)}
                                 disabled={done.includes(v.id)}
-                                className={`mt-6 grid justify-center items-center rounded-lg h-10 px-5 font-semibold
+                                className={`mt-6 grid justify-center items-center rounded-lg py-2 px-5 font-semibold text-[10px] sm:text-[15px]
         ${done.includes(v.id)
                                         ? "bg-transparent border border-gray-500 text-gray-500 cursor-not-allowed"
                                         : "bg-[#C2F800] text-black cursor-pointer"

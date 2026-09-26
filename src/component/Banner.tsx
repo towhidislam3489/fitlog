@@ -5,14 +5,14 @@ import Image from 'next/image';
 
 const Banner = () => {
     return (
-        <div className="sm:flex sm:text-center max-w-[80%] mx-auto bg-[#15171D] justify-around items-center mt-30 pt-5 pb-5 rounded-[10px] mb-38 space-y-8 sm:space-y-0">
+        <div className="sm:flex  max-w-[80%] mx-auto bg-[#15171D] justify-around items-center mt-30 pt-5 pb-5 rounded-[10px] mb-38 space-y-8 sm:space-y-0">
             <div className="space-y-3">
                 <p className="text-[#C2F800]">WORKOUT LIBRARY</p>
-                <h1 className="text-4xl font-bold sm:text-center">
-                    TRAIN WITH  INTENT. LOG <br className="hidden sm:visible" />
+                <h1 className="text-4xl font-bold ">
+                    TRAIN WITH  INTENT. LOG <br  />
                     EVERY SET.
                 </h1>
-                <p className="sm:text-center">FitLog is a dark, no-nonsense gym companion: pick a lift, lock it <br className="hidden sm:visible" />
+                <p className="">FitLog is a dark, no-nonsense gym companion: pick a lift, lock it <br/>
                     into today`s plan, and watch the week`s work add up.</p>
                 <a
                     href="#library"

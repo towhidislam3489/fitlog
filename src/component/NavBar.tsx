@@ -18,13 +18,13 @@ const NavBar = () => {
                     <div >
                         <Link href={'/'} className="flex gap-3 items-center text-center">
                             <Image src={NavLogo} alt='navlogo'></Image>
-                            <h1 className="font-semibold text-[20px]">FIT<span className="text-[#C2F800]">LOG</span></h1>
+                            <h1 className="font-semibold text-[15px] sm:text-[20px]">FIT<span className="text-[#C2F800]">LOG</span></h1>
                         </Link>
 
                     </div>
                     <ul className="flex gap-2">
-                        <Link href={"/"}>  <li className={`${pathname == '/' ? "text-[#C2F800] bg-[#1A2312]" : ""}  items-center text-center rounded-[5px] p-3`}>Workouts</li></Link>
-                        <Link href={"/myplan"}>  <li className={`${pathname == '/myplan' ? "text-[#C2F800] bg-[#1A2312]" : ""}  items-center text-center rounded-[5px] p-3`}>My Plan</li></Link>
+                        <Link href={"/"}>  <li className={`${pathname == '/' ? "text-[#C2F800] bg-[#1A2312]" : ""}  items-center text-center rounded-[5px] p-1 sm:p-3 text-[12px] sm:text-[15px]`}>Workouts</li></Link>
+                        <Link href={"/myplan"}>  <li className={`${pathname == '/myplan' ? "text-[#C2F800] bg-[#1A2312]" : ""}  items-center text-center rounded-[5px] p-1 sm:p-3 text-[12px] sm:text-[15px]`}>My Plan</li></Link>
 
                     </ul>
                     <ul className="flex gap-3">

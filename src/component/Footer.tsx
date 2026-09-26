@@ -10,12 +10,12 @@ const Footer = () => {
                 <div >
                     <Link href={'/'} className="flex gap-3 items-center text-center">
                         <Image src={NavLogo} alt='navlogo'></Image>
-                        <h1 className="font-semibold text-[20px]">FIT<span >LOG</span></h1>
+                        <h1 className="font-semibold text-[15px] sm:text-[20px]">FIT<span >LOG</span></h1>
                     </Link>
 
                 </div>
                 <div>
-                    <p>© 2026 FitLog — Workout Library. Train hard, log honest.</p>
+                    <p className="text-[12px] sm:text-[15px]">© 2026 FitLog — Workout Library. <br className="visible sm:hidden" /> Train hard, log honest.</p>
                 </div>
             </div>
         </div>
